@@ -1,0 +1,29 @@
+<mvc:View controllerName="ladera.royalenfield.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" class="backgroundimg" showHeader="false" >
+
+    
+
+    <HBox class="Logon" justifyContent="End" alignItems="Center" width="70%" height="80%">
+        <VBox class="rightpanel" alignItems="Start" justifyContent="SpaceAround" width="22%"> 
+
+            <Label text="User Name" class="User" /> 
+            <Input id="username" placeholder="Enter User ID" width="110%"/> 
+
+            <Label text="Password" class="User" /> 
+            <Input id="password" type="Password" placeholder="Enter Password" width="110%"/> 
+
+            <CheckBox text="Remember me" class="User" />   
+
+            <Link text="Forgot password?" class="forgotLink" press=".onForgotPassword" /> 
+
+            <HBox  justifyContent="Center" alignItems="Center" >
+                <Button text="Log On" type="Emphasized"  press="onlogon" />
+            </HBox> 
+      </VBox>
+      </HBox> 
+    </Page>
+</mvc:View>
+
+

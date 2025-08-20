@@ -1,0 +1,133 @@
+<mvc:View controllerName="ladera.royalenfield.controller.purchaseorder"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="po" title="Create Purchase Order" >
+
+    <Toolbar >
+    <Button text="Info" type="Emphasized"></Button>
+    <Button text="SEQ" type="Emphasized"></Button>
+    </Toolbar>
+
+    <HBox >
+            <VBox class="sapUiSmallMargin" >
+            <Label text="Purchase type"></Label>
+             <Select id="Purchase"  width="150px">
+                    <items>
+                    </items>
+                </Select>
+            <Label text="Ship To Party"></Label>
+             <Select id="Shiptoparty"  width="150px">
+                    <items>
+                    </items>
+                </Select>
+            <Label text="Adress">
+                </Label>
+                <Text text= '1 Diamond Industrial,
+                                Chennai-600049'></Text>                   
+            </VBox>
+
+
+
+            <VBox class="sapUiSmallMargin" width="300px">
+            <Label text="Payment Type"></Label>
+             <Select id="PaymentType" width="150px">
+                    <items>
+                    
+                    </items>
+                </Select>
+                <!-- <Label text="Dealer Reference Num"></Label> -->
+             <Label
+			text="Dealer Reference Num"
+			labelFor="input-b"
+			design="Standard" />
+		    <Input id="input-b" width="150px" />
+
+            <Label
+			text="PO Ref Date"/>
+            <DatePicker   placeholder=" " width="150px"></DatePicker>                         
+            </VBox >
+
+
+
+            <VBox class="sapUiSmallMargin" width="300px">
+            <Label text="Credit Limit : "></Label>            
+            <Label text="Current Order : "></Label>
+            <Text text="0.00" width="130px"></Text>
+            <Label text="Enable Unit Price :"></Label>
+            <Switch type="AcceptReject" state="true" change="onenablebutton">
+		    </Switch>
+            <Label text="Balance Credit :"></Label>
+            <Text text="0.00" width="150px"></Text>            
+            </VBox>
+
+
+            <VBox id ="vbox4" class="sapUiSmallMargin">
+            <Label text="Total Order Quantity: "></Label>
+            <Text text="0" width="150px"></Text> 
+            <Label text="VAT Amount: "></Label>
+            <Text text="0.00" width="150px"></Text> 
+            <Label text="Total Amount Excluding VAT: "></Label>
+            <Text text="0.00" width="150px"></Text> 
+            <Label text="Total Amount Including VAT: "></Label>
+            <Text text="0.00" width="150px"></Text>
+            </VBox>
+
+            <!-- <HBox >
+            <RadioButton text = "Manual Selection"></RadioButton>
+            </HBox> -->
+                
+                
+    </HBox>
+          <HBox >                    
+		            
+		        <Table id="poTable" items="{data>/items}" inset="false">
+                    <headerToolbar>
+                        <Toolbar>
+                            <Title text="SEQ"/>                            
+                            <ToolbarSpacer/>                            
+                            <Button icon="sap-icon://upload" text="Excel Upload"/>
+                            <Button icon="sap-icon://add" text="Add Row" press="onAddRow"/>
+                        </Toolbar>
+                    </headerToolbar>
+
+                    <columns>
+                        <Column><Text text="Seq"/></Column>
+                        <Column><Text text="Part"/></Column>
+                        <Column><Text text="Quantity"/></Column>
+                        <Column><Text text="In Stock"/></Column>
+                        <Column><Text text="ETA"/></Column>
+                        <Column><Text text="MSRP"/></Column>
+                        <Column><Text text="Dealer Price"/></Column>
+                        <Column><Text text="VAT"/></Column>
+                        <Column><Text text="Amount"/></Column>
+                    </columns>
+
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{data>seq}"/>
+                                <Input value="{data>part}" width="100%"/>
+                                <Input value="{data>quantity}" type="Number"/>
+                                <Text text="{data>inStock}"/>
+                                <Text text="{data>eta}"/>
+                                <Text text="{data>msrp}"/>
+                                <Text text="{data>dealerPrice}"/>
+                                <Text text="{data>vat}"/>
+                                <Text text="{data>amount}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+                </HBox>
+
+                <!-- FOOTER BUTTONS -->
+                <HBox justifyContent="End" class="sapUiSmallMarginTop">
+                    <Button text="Clear" type="Reject" press="onClear"/>
+                    <Button text="Review" type="Emphasized" press="onReview"/>
+                </HBox>
+
+            
+        
+
+     </Page>
+    </mvc:View>
