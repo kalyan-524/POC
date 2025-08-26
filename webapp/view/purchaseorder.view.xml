@@ -1,15 +1,35 @@
 <mvc:View controllerName="ladera.royalenfield.controller.purchaseorder"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="po" title="Create Purchase Order" >
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:u="sap.ui.unified">
 
-    <Toolbar >
+    <Page id="po" title="Create Purchase Order" >
+    
+<!-- <f:DynamicPage id="po" toggleHeaderOnTitleClick="false">
+	<f:title>
+		<f:DynamicPageTitle>
+			<f:heading>
+				<Title text="Details Page"/>
+			</f:heading>
+
+			<f:navigationActions>
+				<Button
+					press="handleClose"
+					icon="sap-icon://decline"
+					type="Transparent" />
+			</f:navigationActions>
+		</f:DynamicPageTitle>
+        </f:title>
+        </f:DynamicPage> -->
+
+    <Toolbar class="Potoolbar">
     <Button text="Info" type="Emphasized"></Button>
     <Button text="SEQ" type="Emphasized"></Button>
     </Toolbar>
 
     <HBox >
-            <VBox class="sapUiSmallMargin" >
+            <VBox class="sapUiSmallMargin" width="400px" >
             <Label text="Purchase type"></Label>
              <Select id="Purchase"  width="150px">
                     <items>
@@ -23,12 +43,12 @@
             <Label text="Adress">
                 </Label>
                 <Text text= '1 Diamond Industrial,
-                                Chennai-600049'></Text>                   
+                                Chennai-600049' width="110px"></Text>                   
             </VBox>
 
 
 
-            <VBox class="sapUiSmallMargin" width="300px">
+            <VBox class="sapUiSmallMargin" width="400px">
             <Label text="Payment Type"></Label>
              <Select id="PaymentType" width="150px">
                     <items>
@@ -38,7 +58,7 @@
                 <!-- <Label text="Dealer Reference Num"></Label> -->
              <Label
 			text="Dealer Reference Num"
-			labelFor="input-b"
+			
 			design="Standard" />
 		    <Input id="input-b" width="150px" />
 
@@ -49,7 +69,7 @@
 
 
 
-            <VBox class="sapUiSmallMargin" width="300px">
+            <VBox class="sapUiSmallMargin" width="400px">
             <Label text="Credit Limit : "></Label>            
             <Label text="Current Order : "></Label>
             <Text text="0.00" width="130px"></Text>
@@ -61,7 +81,7 @@
             </VBox>
 
 
-            <VBox id ="vbox4" class="sapUiSmallMargin">
+            <VBox id ="vbox4" class="sapUiSmallMargin" width="400px">
             <Label text="Total Order Quantity: "></Label>
             <Text text="0" width="150px"></Text> 
             <Label text="VAT Amount: "></Label>
@@ -70,23 +90,20 @@
             <Text text="0.00" width="150px"></Text> 
             <Label text="Total Amount Including VAT: "></Label>
             <Text text="0.00" width="150px"></Text>
-            </VBox>
-
-            <!-- <HBox >
-            <RadioButton text = "Manual Selection"></RadioButton>
-            </HBox> -->
-                
-                
+            </VBox>            
     </HBox>
-          <HBox >                    
-		            
-		        <Table id="poTable" items="{data>/items}" inset="false">
+      
+          <HBox >  
+		        <Table id="poTable" items="{data>/items}" >
                     <headerToolbar>
-                        <Toolbar>
-                            <Title text="SEQ"/>                            
+                        <Toolbar height="100px" class="Potoolbar">
+                            <Title text="SEQ"/>      
                             <ToolbarSpacer/>                            
-                            <Button icon="sap-icon://upload" text="Excel Upload"/>
-                            <Button icon="sap-icon://add" text="Add Row" press="onAddRow"/>
+                                         <u:FileUploader id="Uploader" name="myFileUpload"
+                                          uploadUrl="upload/" tooltip="Upload your file to the local server"
+                                          placeholder="Choose File" width="250px"/>
+                                          <Button text="Upload"></Button>
+                            <Button icon="sap-icon://add" text="Add Row" width="6rem" class="smallBtn" press="onAddRow"/>
                         </Toolbar>
                     </headerToolbar>
 
@@ -108,26 +125,22 @@
                                 <Text text="{data>seq}"/>
                                 <Input value="{data>part}" width="100%"/>
                                 <Input value="{data>quantity}" type="Number"/>
-                                <Text text="{data>inStock}"/>
-                                <Text text="{data>eta}"/>
-                                <Text text="{data>msrp}"/>
-                                <Text text="{data>dealerPrice}"/>
-                                <Text text="{data>vat}"/>
-                                <Text text="{data>amount}"/>
+                                <Input value="{data>inStock}"/>
+                                <Input value="{data>eta}"/>
+                                <Input value="{data>msrp}"/>
+                                <Input value="{data>dealerPrice}"/>
+                                <Input value="{data>vat}"/>
+                                <Input value="{data>amount}"/>
                             </cells>
                         </ColumnListItem>
                     </items>
                 </Table>
                 </HBox>
 
-                <!-- FOOTER BUTTONS -->
+               
                 <HBox justifyContent="End" class="sapUiSmallMarginTop">
                     <Button text="Clear" type="Reject" press="onClear"/>
                     <Button text="Review" type="Emphasized" press="onReview"/>
                 </HBox>
-
-            
-        
-
      </Page>
     </mvc:View>

@@ -7,22 +7,18 @@ sap.ui.define([
 
 	return Controller.extend("ladera.royalenfield.controller.homescreen", {
 		onInit: function () {
-			
 		},
 		OnPurchase: function(){
 			this.getOwnerComponent().getRouter().navTo("purchaseorder")
-
 		},
-		onAfterRendering: function () {
-    var oCarousel = this.byId("mainCarousel");
-    var iIndex = 0;
-    var aPages = oCarousel.getPages();
-
-    setInterval(function () {
-        iIndex = (iIndex + 1) % aPages.length;
-        oCarousel.setActivePage(aPages[iIndex]);
-    }, 3000); // every 3 seconds
-}
+		
+onlogout:function(){
+	MessageToast.show("Logging out..");
+    this.getOwnerComponent().getRouter().navTo("RouteView1")
+},
+onOrdersPress:function(){
+this.getOwnerComponent().getRouter().navTo("catalog")
+		},
 
 		
 	});

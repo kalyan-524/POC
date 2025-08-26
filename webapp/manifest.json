@@ -107,6 +107,13 @@
           "target": [
             "thirdview"
           ]
+        },
+        {
+          "name": "catalog",
+          "pattern": "catalog",
+          "target": [
+            "catalogview"
+          ]
         }
       ],
       
@@ -122,6 +129,10 @@
         "thirdview":{
           "id": "po",
           "name": "purchaseorder"
+        },
+        "catalogview":{
+          "id": "catalog",
+          "name": "catalog"
         }
       }
     },

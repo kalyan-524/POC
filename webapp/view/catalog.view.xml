@@ -1,0 +1,76 @@
+<mvc:View xmlns:layout="sap.ui.layout" controllerName="ladera.royalenfield.controller.catalog"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    
+<Page id ="catalog"  showHeader="false">
+
+<Toolbar class="abc">
+<Button class="furbutton"
+				text="Furniture" 
+				press="handlePopoverPress"
+				ariaHasPopup="Dialog"
+                type="Emphasized"
+                width="100px"/>
+                            <ToolbarSpacer ></ToolbarSpacer>
+                            <Title text="Catalog"></Title>
+<ToolbarSpacer ></ToolbarSpacer>
+<Button text="Back" icon="sap-icon://nav-back" press="onnavback"></Button>
+</Toolbar>
+
+<!-- <HBox class="sapUiTinyMargin" alignItems="Center" justifyContent="SpaceAround" > -->
+<FlexBox justifyContent="SpaceAround" alignContent="Center" >
+<layout:HorizontalLayout  >
+<GenericTile 
+                 frameType="TwoByOne"
+                    class="sapUiTinyMargin"
+                    backgroundImage="images/tsofa.jpg"
+                    header="Sofa"
+                    press="ontilesofapress">
+                </GenericTile>
+               
+<GenericTile
+                 frameType="TwoByOne"
+                    class="sapUiTinyMargin"
+                    backgroundImage="images/tilesbedcot.jpg"
+                    header="BedCot"
+                    press="ontileBedCotpress">
+                </GenericTile>
+<GenericTile
+                 frameType="TwoByOne"
+                    class="sapUiTinyMargin"
+                    backgroundImage="images/Diningtable.jpg"
+                    header="Dining Tables"
+                    press="ontileDiningtablepress">
+                </GenericTile>
+</layout:HorizontalLayout>
+</FlexBox>
+
+<FlexBox justifyContent="SpaceAround" alignContent="Center" >
+<layout:HorizontalLayout > 
+<GenericTile
+                 frameType="TwoByOne"
+                    class="sapUiTinyMargin"
+                    backgroundImage="https://stylesatlife.com/wp-content/uploads/2019/11/best-office-table-designs.jpg"
+                    header="Office Tables"
+                    press="ontileOfficeTablepress">
+                </GenericTile>
+<GenericTile
+                 frameType="TwoByOne"
+                    class="sapUiTinyMargin"
+                    backgroundImage="https://lzd-img-global.slatic.net/g/p/84d4f26ae76e0db7325b98e675351bbd.jpg_720x720q80.jpg"
+                    header="Tables"
+                    press="ontileTablepress">
+                </GenericTile>
+<GenericTile
+                 frameType="TwoByOne"
+                    class="sapUiTinyMargin"
+                    backgroundImage="https://smhttp-ssl-77687.nexcesscdn.net/media/catalog/product/cache/1/image/650x650/9df78eab33525d08d6e5fb8d27136e95/8/8/881183-office-chair-1.jpg"
+                    header="Office Chairs"
+                    press="ontileChairpress">
+                </GenericTile>
+               
+            </layout:HorizontalLayout>
+            </FlexBox>
+</Page >
+</mvc:View>

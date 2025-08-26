@@ -1,0 +1,32 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+		xmlns:tnt="sap.tnt"
+	xmlns:core="sap.ui.core">
+	<Popover
+		id="myPopover"
+		title="Menu"
+		class="sapUiResponsivePadding--header sapUiResponsivePadding--footer"
+		placement="Bottom">
+		<!-- initialFocus="email"> -->
+		<tnt:NavigationList id="email" itemPress="onCategorySelect" >
+			<tnt:NavigationListItem text="Sofa's" icon="sap-icon://building"  >
+				<tnt:NavigationListItem text="Three Seater"  id="subItem1"  />
+				<tnt:NavigationListItem text="L-Shaped Sofa"  id="subItem2" />
+				<tnt:NavigationListItem text="Recliner Sofa" id="subItem3" key="subItem3" />
+				<!-- <tnt:NavigationListItem text="Sub Item 4" /> -->
+			</tnt:NavigationListItem>
+			<tnt:NavigationListItem text="Bed Cot's" icon="sap-icon://building">
+				<tnt:NavigationListItem text="King Size Bedcot" />
+				<tnt:NavigationListItem text="Queen Size Bedcot" />
+				<tnt:NavigationListItem text="Single Bedcot" />
+				<tnt:NavigationListItem text="Storage Bedcot" />
+			</tnt:NavigationListItem>
+			<tnt:NavigationListItem text="Dining Tables and Sets" icon="sap-icon://building">
+				<tnt:NavigationListItem text="4 Seater DiningTable" />
+				<tnt:NavigationListItem text="6 Seater DiningTable"/>
+				<tnt:NavigationListItem text="Marble Finished table" />
+				<tnt:NavigationListItem text="Canvas DiningTable" />
+			</tnt:NavigationListItem>
+		</tnt:NavigationList>
+	</Popover>
+</core:FragmentDefinition>

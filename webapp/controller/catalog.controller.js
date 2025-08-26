@@ -1,0 +1,41 @@
+sap.ui.define([
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/core/UIComponent",
+    'sap/m/MessageToast',
+], (Controller,) => {
+    "use strict";
+
+    return Controller.extend("ladera.royalenfield.controller.catalog", {
+        onInit() {
+        },
+        onnavback:function(){
+          this.getOwnerComponent().getRouter().navTo("homescreen")  
+        },
+       handlePopoverPress: function (oEvent) {
+    var oButton = oEvent.getSource();
+
+    if (!this.category) {
+        this.category = sap.ui.xmlfragment("ladera.royalenfield.view.category", this);
+        this.getView().addDependent(this.category);
+    }
+
+    // 👉 Toggle logic
+    if (this.category.isOpen()) {
+        this.category.close();
+    } else {
+        this.category.openBy(oButton);
+    }
+},
+
+onCategorySelect: function (oEvent) {
+    // var oSelectedItem = oEvent.getParameter("item");
+     var oSelectedItem = oEvent.getParameter("id");
+    var sText = oSelectedItem.getText();
+
+    sap.m.MessageToast.show("You selected: " + sText);
+
+    this.category.close(); // close on selection
+}
+
+    });
+});

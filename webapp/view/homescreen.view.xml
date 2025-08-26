@@ -3,10 +3,11 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core">
  
-    <Page id="homescreen"  showHeader="false">
-        <Page showHeader="false">
+    <Page id="homescreen"  showHeader="false" showFooter="false">
+    
+        <Page showHeader="false" >
                 <VBox height="300px">
-                         <Bar class="abc" design="Header">
+                         <Bar class="abc" >
                             <contentLeft>
                                     <Image 
                                         src="https://static.vecteezy.com/system/resources/previews/019/514/630/non_2x/letter-k-logo-design-for-business-and-company-identity-with-luxury-concept-free-vector.jpg"
@@ -17,30 +18,36 @@
                                         <Text text="Bring fashion to your home" class="tagline"></Text>
                             </contentLeft>
                         </Bar>
-                        <OverflowToolbar >
-        
-
+        <OverflowToolbar >
         <MenuButton text="Purchase"  type="Transparent">
-        <menu>
             <Menu>
                 <MenuItem text="Create Purchase Order" icon="sap-icon://customer" press="OnPurchase"/>
                 <MenuItem text="Catalog" icon="sap-icon://course-book" press="onOrdersPress"/>
                 <MenuItem text="NewArrivals" icon="sap-icon://ai" press="onSettingsPress"/>
             </Menu>
-        </menu>
     </MenuButton>
-             <Button text="Finance" type="Transparent" />
+
+            <Button text="Finance" type="Transparent" />
             <Button text="SmartStorage" type="Transparent"/>
             <Button text="Franchise" type="Transparent"/>
+            
+<ToolbarSpacer ></ToolbarSpacer>
+    <MenuButton text="Settings"  type="Transparent">
+            <Menu>
+                <MenuItem text="Logout" icon="sap-icon://log" press="onlogout"/>
+            </Menu>
+    </MenuButton>
     </OverflowToolbar>
     
-       <Carousel id="mainCarousel" height="530px" loop="true" pageIndicatorPlacement="Bottom" activePage="0">
-                            <Image src="images/fp1.jpg"  width="100%"/>
-                            <Image src="images/fp2.jpg"  width="100%"/>
-                            <Image src="images/fp4.jpg"  width="100%"/>
-                            <Image src="images/fp7.jpg"  width="100%"/>
-       </Carousel>
-                    </VBox>
-                </Page>
+    <Carousel id="mainCarousel" height="530px" loop="true" pageIndicatorPlacement="OverContentBottom" activePage="0">
+            <Image src="images/fp1.jpg"  width="100%"/>
+            <Image src="images/fp2.jpg"  width="100%"/>
+            <Image src="images/fp4.jpg"  width="100%"/>
+            <Image src="images/fp7.jpg"  width="100%"/>
+    </Carousel>
+    
+</VBox>
+
+</Page>
     </Page>
 </mvc:View>
