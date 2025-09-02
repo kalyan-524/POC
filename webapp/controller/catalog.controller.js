@@ -18,8 +18,6 @@ sap.ui.define([
         this.category = sap.ui.xmlfragment("ladera.royalenfield.view.category", this);
         this.getView().addDependent(this.category);
     }
-
-    // 👉 Toggle logic
     if (this.category.isOpen()) {
         this.category.close();
     } else {
@@ -34,8 +32,57 @@ onCategorySelect: function (oEvent) {
 
     sap.m.MessageToast.show("You selected: " + sText);
 
-    this.category.close(); // close on selection
+    this.category.close(); 
+},
+// onSearchCatalog: function (oEvent) {
+//     var sQuery = oEvent.getParameter("newValue").toLowerCase(); // typed value
+//     var oContainer = this.byId("catalogContainer"); // flexbox
+//     var aItems = oContainer.getItems();
+    
+// }
+
+onSearchCatalog: function (oEvent) {
+    var sQuery = oEvent.getParameter("newValue").toLowerCase(); // user input
+    var oFlexBox = this.byId("catalogContainer"); // FlexBox id
+    var oFlexBox1 = this.byId("catalogContainer1");
+    var aItems = oFlexBox.getItems()[0].getContent(); // HorizontalLayout items (tiles)
+var aItems1 = oFlexBox1.getItems()[0].getContent();
+    aItems.forEach(function (oTile) {
+        var sHeader = oTile.getHeader().toLowerCase();
+        if (sHeader.includes(sQuery) || sQuery === "") {
+            oTile.setVisible(true);
+        } else {
+            oTile.setVisible(false);
+        }
+    }),
+    aItems1.forEach(function (oTile) {
+        var sHeader = oTile.getHeader().toLowerCase();
+        if (sHeader.includes(sQuery) || sQuery === "") {
+            oTile.setVisible(true);
+        } else {
+            oTile.setVisible(false);
+        }
+    });
 }
+
+
+
+    
+
+// onSearchCatalog: function (oEvent) {
+//     var sQuery = oEvent.getParameter("newValue").toLowerCase(); // typed value
+//     var oContainer = this.byId("catalogContainer"); // flexbox
+//     var aItems = oContainer.getItems();
+
+//     aItems.forEach(function (oItem) {
+//         var sText = oItem.getItems()[1].getText().toLowerCase(); // assuming Text is second in VBox
+//         if (sText.includes(sQuery) || sQuery === "") {
+//             oItem.setVisible(true);
+//         } else {
+//             oItem.setVisible(false);
+//         }
+//     } 
+
 
     });
 });

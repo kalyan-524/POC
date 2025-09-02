@@ -12,15 +12,24 @@
 				ariaHasPopup="Dialog"
                 type="Emphasized"
                 width="100px"/>
-                            <ToolbarSpacer ></ToolbarSpacer>
-                            <Title text="Catalog"></Title>
+<ToolbarSpacer ></ToolbarSpacer>
+<Title text="CATALOG" ></Title>
+<SearchField
+        width="20%"
+        liveChange="onSearchCatalog"
+        placeholder="Search furniture..." />
+
+
+        
 <ToolbarSpacer ></ToolbarSpacer>
 <Button text="Back" icon="sap-icon://nav-back" press="onnavback"></Button>
 </Toolbar>
 
-<!-- <HBox class="sapUiTinyMargin" alignItems="Center" justifyContent="SpaceAround" > -->
-<FlexBox justifyContent="SpaceAround" alignContent="Center" >
-<layout:HorizontalLayout  >
+
+
+<FlexBox justifyContent="SpaceAround" alignContent="Center" id="catalogContainer" >
+
+<layout:HorizontalLayout>
 <GenericTile 
                  frameType="TwoByOne"
                     class="sapUiTinyMargin"
@@ -46,7 +55,7 @@
 </layout:HorizontalLayout>
 </FlexBox>
 
-<FlexBox justifyContent="SpaceAround" alignContent="Center" >
+<FlexBox justifyContent="SpaceAround" alignContent="Center" id="catalogContainer1" >
 <layout:HorizontalLayout > 
 <GenericTile
                  frameType="TwoByOne"
@@ -72,5 +81,6 @@
                
             </layout:HorizontalLayout>
             </FlexBox>
+            
 </Page >
 </mvc:View>
