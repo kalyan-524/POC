@@ -4,8 +4,9 @@
     xmlns:core="sap.ui.core">
     
 <Page id ="catalog"  showHeader="false">
-
-<Toolbar class="abc">
+<content>
+<Toolbar >
+<Button text="Back" icon="sap-icon://nav-back" press="onnavback"></Button>
 <Button class="furbutton"
 				text="Furniture" 
 				press="handlePopoverPress"
@@ -13,24 +14,21 @@
                 type="Emphasized"
                 width="100px"/>
 <ToolbarSpacer ></ToolbarSpacer>
-<Title text="CATALOG" ></Title>
 <SearchField
         width="20%"
         liveChange="onSearchCatalog"
         placeholder="Search furniture..." />
 
+       
 
-        
-<ToolbarSpacer ></ToolbarSpacer>
-<Button text="Back" icon="sap-icon://nav-back" press="onnavback"></Button>
+
 </Toolbar>
-
-
+	
 
 <FlexBox justifyContent="SpaceAround" alignContent="Center" id="catalogContainer" >
 
 <layout:HorizontalLayout>
-<GenericTile 
+                <GenericTile 
                  frameType="TwoByOne"
                     class="sapUiTinyMargin"
                     backgroundImage="images/tsofa.jpg"
@@ -38,14 +36,14 @@
                     press="ontilesofapress">
                 </GenericTile>
                
-<GenericTile
+                <GenericTile
                  frameType="TwoByOne"
                     class="sapUiTinyMargin"
                     backgroundImage="images/tilesbedcot.jpg"
                     header="BedCot"
                     press="ontileBedCotpress">
                 </GenericTile>
-<GenericTile
+                <GenericTile
                  frameType="TwoByOne"
                     class="sapUiTinyMargin"
                     backgroundImage="images/Diningtable.jpg"
@@ -57,21 +55,21 @@
 
 <FlexBox justifyContent="SpaceAround" alignContent="Center" id="catalogContainer1" >
 <layout:HorizontalLayout > 
-<GenericTile
+                <GenericTile
                  frameType="TwoByOne"
                     class="sapUiTinyMargin"
                     backgroundImage="https://stylesatlife.com/wp-content/uploads/2019/11/best-office-table-designs.jpg"
                     header="Office Tables"
                     press="ontileOfficeTablepress">
                 </GenericTile>
-<GenericTile
+                <GenericTile
                  frameType="TwoByOne"
                     class="sapUiTinyMargin"
                     backgroundImage="https://lzd-img-global.slatic.net/g/p/84d4f26ae76e0db7325b98e675351bbd.jpg_720x720q80.jpg"
                     header="Tables"
                     press="ontileTablepress">
                 </GenericTile>
-<GenericTile
+                <GenericTile
                  frameType="TwoByOne"
                     class="sapUiTinyMargin"
                     backgroundImage="https://smhttp-ssl-77687.nexcesscdn.net/media/catalog/product/cache/1/image/650x650/9df78eab33525d08d6e5fb8d27136e95/8/8/881183-office-chair-1.jpg"
@@ -81,6 +79,25 @@
                
             </layout:HorizontalLayout>
             </FlexBox>
-            
+<FlexBox justifyContent="SpaceAround" alignContent="Center" id="catalogContainer2" >
+<layout:HorizontalLayout > 
+            <GenericTile
+                 frameType="TwoByOne"
+                    class="sapUiTinyMargin"
+                    backgroundImage="https://img.freepik.com/premium-photo/summit-dressing-table-white-background_1247367-26980.jpg"
+                    header="Dressing Table"
+                    press="ontiledressingtablepress">
+                </GenericTile>
+            <GenericTile
+                 frameType="TwoByOne"
+                    class="sapUiTinyMargin"
+                    backgroundImage="images/beanbag.jpg"
+                    header="Bean Bag"
+                    press="ontilebeanbagpress">
+            </GenericTile>
+               
+            </layout:HorizontalLayout>
+            </FlexBox>
+     </content>      
 </Page >
 </mvc:View>

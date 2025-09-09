@@ -3,8 +3,9 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <App id="app">
-<!-- <Page >
- <Bar class="abc" >
+<Page  showHeader="false" >
+<!-- <customHeader> -->
+ <Bar class="abc" id="barid" >
 <contentLeft>
  <Image 
  src="https://static.vecteezy.com/system/resources/previews/019/514/630/non_2x/letter-k-logo-design-for-business-and-company-identity-with-luxury-concept-free-vector.jpg"
@@ -15,7 +16,10 @@ height="50px" class="logo"/>
 <Text text="Bring fashion to your home" class="tagline"></Text>
 </contentLeft>
 </Bar>
-</Page> -->
+<!-- </customHeader> -->
+<NavContainer id="appviewid"></NavContainer>
+
+</Page>
 
     </App>
 </mvc:View>

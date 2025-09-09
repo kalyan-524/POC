@@ -78,7 +78,10 @@
       "config": {
         "routerClass": "sap.m.routing.Router",
         "controlAggregation": "pages",
-        "controlId": "app",
+        "controlId": "appviewid",
+        "bypassed": {
+          "target" : "RouteView1" 
+        },
         "transition": "slide",
         "type": "View",
         "viewType": "XML",
@@ -114,6 +117,13 @@
           "target": [
             "catalogview"
           ]
+        },
+        {
+          "name": "sofatile",
+          "pattern": "sofatile",
+          "target": [
+            "sofatileview"
+          ]
         }
       ],
       
@@ -133,6 +143,10 @@
         "catalogview":{
           "id": "catalog",
           "name": "catalog"
+        },
+        "sofatileview":{
+          "id": "sofatile",
+          "name": "sofatile"
         }
       }
     },

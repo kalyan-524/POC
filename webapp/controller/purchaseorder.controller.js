@@ -37,32 +37,44 @@ onAddRow:function(){
         amount: "0.00"
     };
 
+    // aItems.unshift(newProductObj);
     aItems.push(newProductObj);
-
     oModel.setProperty("/items", aItems); 
     oModel.refresh(true); 
 } ,
-	// function(BlockBase){
-	// 	"use strict";
+	 onnavback:function(){
+          this.getOwnerComponent().getRouter().navTo("homescreen")  
+        }
+        
 
-	// 	var BlockBlueT1 = BlockBase.extend("ladera.royalenfield.controller.purchaseorder", {
-	// 		metadata: {
-	// 			views: {
-	// 				Collapsed: {
-	// 					viewName: "purchaseorder",
-	// 					type: "XML"
-	// 				},
-	// 				Expanded: {
-	// 					viewName: "purchaseorder",
-	// 					type: "XML"
-	// 				}
-	// 			}
-	// 		}
-	// 	});
+        // Handlexlupload:function(oEvent){
+        //     var that = this;
+        //     var files = oEvent.getParameter("files");
+        //     if(files.length > 0)
+        //     {
+        //         var reader = new FileReader();
+        //         reader.onload = function(e){
+        //          var data = e.target.result;
+        //          var workbook =  XLSX.read(data,{
+        //             type : "Binary"
+        //          });
+        //         var tabledata = [];
+        //         workbook.SheetNames.forEach(SheetName =>{
+        //             var xl_row_data = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[SheetName]);
+        //             tabledata = [...tabledata,...xl_row_data];
+        //         });
 
-	// 	return BlockBlueT1;
+        //         var jmodel = new sap.ui.model.json.JSONModel({result:tabledata});
+        //         that.getView().setModel(jmodel,"data1")
+        //         }
+        //         reader.onerror = function(ex){
+        //             console.log(ex);
+        //         }
 
-	// }
+        //         reader.readAsArrayBuffer(files[0]);
+        //     }
+
+        // }
                     
     });
 });

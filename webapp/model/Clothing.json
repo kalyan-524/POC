@@ -1,0 +1,92 @@
+{
+  "catalog": {
+    "store": {
+      "categories": [
+        {"name": "Furniture", "categories": [
+          {"name":"Living", "categories": [
+            {"name": "Sofa's", "categories": [
+              {"name": "L Shape Sofa", "amount": 16.99, "currency": "USD", "size": " "},
+              {"name": "Threee Seater Sofa", "amount": 47.99, "currency": "USD", "size": " "}
+              
+            ]},
+           
+            {"name": "Tables", "categories": [
+              {"name": "Center Table", "amount": 32.99, "currency": "USD", "size": " "},
+              {"name": "Dining Table", "amount": 44.99, "currency": "USD", "size": " "}
+              
+            ]},
+            {"name": "Recliners", "categories": [
+              {"name": "Fabric Recliner", "amount": 24.99, "currency": "USD", "size": " "},
+              {"name": "Leather Recliner", "amount": 44.99, "currency": "USD", "size": " "},
+              {"name": "Single Seat Recliner", "amount": 44.99, "currency": "USD", "size": " "}
+            ]}
+          ]},
+          {"name":"Bedroom", "categories": [
+              {"name": "King Size Cot", "amount": 16.99, "currency": "USD","size": " "},
+              {"name": "Queen Size Cot", "amount": 47.99, "currency": "USD","size": " "},
+              {"name": "Single Cot", "amount": 399.99, "currency": "USD","size": " "}
+            ]},
+          {"name":"Study & Office Furniture", "categories": [
+            {"name": "Study Tables", "amount": 16.99, "currency": "USD", "size": " "},
+            {"name": "Office Table", "amount": 47.99, "currency": "USD", "size": " "},
+            {"name": "Conference Table", "amount": 47.99, "currency": "USD", "size": " "}
+          ]},
+          {"name":"Modular Furntiure", "categories": [
+            {"name": "Modular Kitchen", "amount": 89.99, "currency": "USD","size": " "},
+            {"name": "Modular Wardropes", "amount": 47.99, "currency": "USD","size": " "}
+            
+          ]}
+        ]},
+        {"name": "New Arrivals", "categories": [
+          
+            {"name": "Hydraulic Storage Cots", "categories": [
+              {"name": "Queen Size Cot", "amount": 9.99, "currency": "USD", "size": " "},
+              {"name": "King Size Cot", "amount": 47.99, "currency": "USD", "size": " "}
+             
+            ]},
+            {"name": "Percy Corner Sofa's", "categories": [
+              {"name": "4 Seater", "amount": 78.99, "currency": "USD", "size": " "},
+              {"name": "6 Seater", "amount": 54.99, "currency": "USD", "size": " "}
+            ]}
+            
+        ]},
+          {"name": "Kids Furniture", "categories": [
+            {"name":"Kids Tables", "categories": [
+              {"name": "Kids Chairs", "categories": [
+                {"name": "Single Chairs", "amount": 16.99, "currency": "USD", "size": " "}
+                
+              ]},
+              {"name": "2 Stair Beds", "categories": [
+                {"name": "With Matresess", "amount": 24.99, "currency": "USD", "size": " "}
+                
+              ]}
+              
+            ]}
+     
+          ]},
+            {"name": "Mattress", "categories": [
+              
+                {"name": "Spring Matresess", "categories": [
+                  {"name": "Size 6 x 5", "amount": 16.99, "currency": "USD", "size": " "},
+                  {"name": "Size 6 x 6", "amount": 47.99, "currency": "USD", "size": " "}
+                  
+                ]},
+                {"name": "Memory Foam Matresess", "categories": [
+                  {"name": "Size 6 x 5", "amount": 44.99, "currency": "USD", "size": " "},
+                  {"name": "Size 6 x 6", "amount": 89.99, "currency": "USD", "size": " "}
+                ]},
+                {"name": "Latix Matresses", "categories": [
+                  {"name": "Size 6 x 5", "amount": 32.99, "currency": "USD", "size": " "},
+                  {"name": "Size 6 x 6", "amount": 99.99, "currency": "USD", "size": " "}
+                ]}
+            ]}
+        ]}
+
+    },
+  "sizes": [
+    {"key": "1", "value": "1 "},
+    {"key": "2", "value": "2 "},
+    {"key": "3", "value": "3"},
+    {"key": "4", "value": "4"}
+  ]
+  }
